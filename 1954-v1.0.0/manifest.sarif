@@ -1,0 +1,110 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 1954,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "candidate",
+        "submissionDate": "2007-07-13",
+        "language": "cplusplus",
+        "author": "Jonathan Diamond",
+        "description": "users can add the arguments -debug -root to take advantage of leftover debug code",
+        "state": "bad",
+        "pairs": [
+          "1960-v1.0.0"
+        ]
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/LeftOverDebug_bad.cpp"
+          },
+          "length": 1160,
+          "sourceLanguage": "cplusplus",
+          "hashes": {
+            "sha-256": "c0092cb790caefb28d343a5f1c0a20351d1dd92a50789ee1fcaf4bf9f8d07115"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "489",
+              "name": "Active Debug Code"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-489",
+          "message": {
+            "text": "Active Debug Code."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/LeftOverDebug_bad.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/LeftOverDebug_bad.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 40
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "489",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

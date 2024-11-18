@@ -1,0 +1,95 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 2013,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "accepted",
+        "submissionDate": "2007-10-15",
+        "language": "cplusplus",
+        "description": "The test case shows a resource injection.",
+        "state": "bad"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/ResourceInjection_basic_bad.cpp"
+          },
+          "length": 931,
+          "sourceLanguage": "cplusplus",
+          "hashes": {
+            "sha-256": "231fa37d18b79fd41b0bfd6a03671156287f207e80ca89484823ac747c929d8f"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "99",
+              "name": "Improper Control of Resource Identifiers ('Resource Injection')"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-99",
+          "message": {
+            "text": "Improper Control of Resource Identifiers ('Resource Injection')."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/ResourceInjection_basic_bad.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 26
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "99",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
